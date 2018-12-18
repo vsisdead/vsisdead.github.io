@@ -1,0 +1,528 @@
+﻿html,body {
+	margin: 0;
+	padding: 0;
+	background-color: #171717;
+}
+@font-face {
+        font-family: Century; /* Имя шрифта */
+        src: url(../fonts/CenturyGothic.ttf); /* Путь к файлу со шрифтом */
+    }
+@font-face {
+        font-family: Anime; /* Имя шрифта */
+        src: url(../fonts/9421.ttf); /* Путь к файлу со шрифтом */
+    }
+@font-face {
+        font-family: Raleway; /* Имя шрифта */
+        src: url(../fonts/Raleway-SemiBold.ttf); /* Путь к файлу со шрифтом */
+    }
+@font-face {
+        font-family: Raleway-Thin; /* Имя шрифта */
+        src: url(../fonts/Raleway-Thin.ttf); /* Путь к файлу со шрифтом */
+    }
+.content {
+	display: flex;
+	flex-direction: column;
+}
+.header::-webkit-scrollbar {
+    width: 0px;
+}
+.body::-webkit-scrollbar {
+    width: 0px;
+}
+.header {
+	box-shadow: inset 70px 70px 100px 0px #171717, inset 70px -70px 100px 0px #171717;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	overflow-y: scroll;
+	background-attachment: fixed;
+	background-size: 50% 100%;
+	background-position: 100% 50%;
+	background-image: url('../img/back.jpg');
+	background-color: #808080;
+}
+.header .left {
+	width: 50%;
+	background-color: #171717;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+.header .left .up {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.header .left .up .space {
+	margin-left: 3%;
+	min-width: 42%;
+	height: 100%;
+	background-color: #171717;
+	z-index: 10;
+}
+.header .left .up .text {
+	padding-right: 10px;
+	min-width: 70%;
+	display: flex;
+	flex-direction: column;
+}
+.header .left .up .text .future {
+	margin: 0px 0;
+	font-family: Raleway;
+	font-size: 20px;
+	color: white;
+	 height: 5%;
+	box-shadow:inset 0 0 0 0;
+	width: 100%;
+	/* border-bottom: 2px solid #808080; */
+	padding-top: 0px;
+}
+.header .left .up .text .start {
+	margin: 0px 0;
+	font-family: Raleway;
+	font-size: 20px;
+	color: white;
+	height: 35%;
+	width: 100%;
+	padding-top: 10px;
+
+}
+
+.header .left .up .text .start1 {
+	margin: 0px 0;
+	font-family: Raleway;
+	font-size: 15px;
+	color: white;
+	 height: 30%
+	width: 100%;
+	 padding-top: 20px;
+	
+	
+}
+
+
+.header .left .up .text .today {
+	margin: 0px 0;
+	font-family: Raleway;
+	font-size: 15px;
+	color: white;
+	height: 50px;
+	width: 280px;
+	border-bottom: 2px solid #808080;
+	padding-top: 10px;
+}
+.header .left .up .text .button {
+	padding: 10px 10px;
+	font-family: Raleway;
+	font-size: 10px;
+	color: white;
+	border: 2px solid #808080;
+	margin-top: 40px;
+	width: 160px;
+	text-align: center;
+	margin-left: 7px;
+	cursor: pointer;
+	transition: .3s;
+}
+.header .left .up .text .button:hover {
+	background-color: #808080;
+	color: #171717;
+}
+.header .left .up .scroll {
+	transform: rotate(-90deg);
+	font-family: Raleway-Thin;
+	font-weight: bold;
+	font-size: 8px;
+	letter-spacing: 1px;
+	color: white;
+	position: absolute;
+	bottom: 40px;
+	right: 30px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+.header .left .up .scroll .arrow {
+	font-size: 30px;
+	font-family: Raleway-Thin;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	color: #808080;
+}
+.header .left .up .text .underbutton {
+	padding: 10px 10px;
+	font-family: Raleway;
+	font-size: 10px;
+	color: white;
+	width: 160px;
+	text-align: center;
+	margin-left: 7px;
+}
+.header .left .up .text .more {
+	font-family: Raleway;
+	font-size: 18px;
+	width: 60%;
+	color: white;
+	padding-left: 7px;
+	margin: 0;
+}
+.header .left .up .text .undermore {
+	width: 120px;
+	height: 5px;
+	background-color: #808080;
+}
+.header .left .up .text .more2 {
+	font-family: Raleway-Thin;
+	font-weight: bold;
+	margin: 10px 0;
+	font-size: 13px;
+	width: 60%;
+	color: white;
+	padding-left: 7px;
+}
+.menu {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+}
+.context {
+	width: 55%;
+	display: flex;
+	align-self: center;
+	margin: 0 22.5%;
+	flex-direction: column;
+}
+.menu .logo {
+	margin-left: 3%;
+	margin-top: 10px;
+	width: 47%;
+	height: 100px;
+	background-position: 0% 50%;
+	background-size: 232;
+	background-repeat: no-repeat;
+	background-image: url('../img/logo.png');
+}
+.menu .points {
+	width: 50%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.menu .points .point {
+	font-size: 14px;
+	color: white;
+	padding: 10px 15px 10px 15px;
+	margin: 0 15px 0 15px;
+	cursor: pointer;
+	font-family: Raleway;
+}
+.menu .points .investor {
+	border: 2px solid #808080;
+	transition: .3s;
+}
+.menu .points .investor:hover {
+	border: 2px solid #808080;
+	background-color: #808080;
+	color: #171717;
+}
+.header .right {
+	width: 50%;
+	height: 100%;
+}
+/*               3 screen           */
+.how {
+	display: flex;
+	justify-content: space-between;
+	background-color: #171717;
+	padding-top: 50px;
+	padding-bottom: 120px;
+}
+.title_block {
+	font-family: Raleway;
+	font-size: 35px;
+	text-align: center;
+	padding: 10px;
+	padding-top: 80px;
+	background-color: #171717;
+	color: white;
+}
+.how .block {
+	width: 32%;
+	font-family: Raleway;
+	font-size: 15px;
+	color: white;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.how .block .image {
+	width: 100%;
+	height: 200px;
+	background-image: url('../img/token.png');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+/*         invest            */
+.invest {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+.invest .block {
+	width: 32%;
+	display: flex;
+	flex-direction: column;
+	background-color: #ffffff;
+	border-radius: 10px;
+	align-items: center;
+}
+.invest .block .number {
+	font-family: Raleway;
+	font-weight: bold;
+	font-size: 40px;
+	text-align: center;
+	color: #808080;
+	width: 100%;
+}
+.invest .block .sub {
+	padding: 10px 0px;
+	font-family: Raleway;
+	font-size: 18px;
+	text-align: center;
+	color: #171717;
+	width: 90%;
+}
+.invest .block .disc {
+	font-family: Raleway;
+	font-size: 15px;
+	text-align: center;
+	color: #171717;
+	width: 90%;
+	padding-bottom: 20px;
+}
+.context .button {
+	width: 50%;
+	text-align: center;
+	font-size: 15px;
+	font-family: Raleway;
+	border: 2px solid #808080;
+	padding: 10px 0px;
+	color: white;
+	align-self: center;
+	cursor: pointer;
+	transition: .3s;
+	margin-bottom: 40px;
+}
+.context .button:hover {
+	background-color: #808080;
+	color: #171717;
+}
+/*                     news                 */
+.news {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-image: url('../img/news_back.jpg');
+	background-size: cover;
+	background-position: 50% 50%;
+	justify-content: center;
+	align-items: center;
+	box-shadow: inset 0px 150px 2500px 0px #171717;
+}
+.news .title {
+	font-family: Raleway;
+	font-size: 40px;
+	text-align: center;
+	padding: 40px;
+	padding-top: 80px;
+	color: white;
+}
+.news .blocks {
+	width: 55%;
+	display: flex;
+	align-self: center;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-bottom: 100px;
+}
+.news .blocks .block {
+	width: 32%;
+	background-color: white;
+	border-radius: 10px;
+	position: relative;
+}
+.news .blocks .block .image {
+	width: 100%;
+	height: 200px;
+	border-radius: 10px 10px 0 0;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+.news .blocks .block .title {
+	padding: 10px;
+	font-family: Raleway;
+	font-size: 15px;
+	color: black;
+	text-align: left;
+	padding-bottom: 50px;
+}
+.news .blocks .block .more {
+	padding-bottom: 10px;
+	padding-top: 10px;
+	font-family: Raleway;
+	font-size: 12px;
+	color: black;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	cursor: pointer;
+	transition: .3s;
+	border-radius: 0 0 10px 10px;
+}
+.news .blocks .block .more:hover {
+	background-color: #171717;
+	color: white;
+}
+.map {
+	width: 100%;
+	height: 400px;
+	display: flex;
+	position: relative;
+}
+.map .contacts {
+	width: 330px;
+	height: 280px;
+	padding: 20px;
+	position: absolute;
+	left: 22.5%;
+	top: 50px;
+	background-color: white
+}
+.map .contacts .title {
+	font-size: 30px;
+	color: black;
+	min-height: 80px;
+	font-family: Raleway;
+}
+.map .contacts .check {
+	font-size: 10px;
+	color: black;
+	font-family: Raleway;
+}
+.map .contacts .undercheck {
+	font-size: 20px;
+	color: black;
+	font-family: Raleway;
+	padding-bottom: 30px;
+}
+.map .contacts .social {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.map .contacts .icon {
+	width: 30px;
+	height: 30px;
+	margin: 5px;
+	background-size: cover;
+	cursor: pointer;
+}
+.map #maper {
+	width: 100%;
+	height: 100%;
+	filter: grayscale(100%);
+}
+.map #maper iframe {
+	filter: invert(1);
+}
+@media only screen and (min-width: 1700px) {
+.header .left .up .text .future {
+	font-size: 93px;
+	height: 87px;
+	width: 370px;
+	border-bottom: 10px solid #808080;
+}
+.header .left .up .text .start {
+	font-size: 93px;
+	height: 87px;
+	width: 320px;
+	border-bottom: 10px solid #808080;
+}
+.header .left .up .text .today {
+	font-size: 93px;
+	height: 87px;
+	width: 270px;
+	padding-left: 4px;
+	border-bottom: 10px solid #808080;
+}
+.menu .points .point {
+	font-size: 20px;
+}
+.header .left .up .text .more {
+	font-size: 24px;
+}
+.header .left .up .text .undermore {
+	width: 130px;
+}
+.header .left .up .text .more2 {
+	font-size: 19px;
+}
+.title_block {
+	font-size: 40px;
+}
+.how .block {
+	font-size: 22px;
+}
+.invest .block .number {
+	font-size: 50px;
+}
+.invest .block .sub {
+	font-size: 22px;
+}
+.invest .block .disc {
+	font-size: 18px;
+}
+.context .button {
+	font-size: 20px;
+}
+.news .blocks .block .title {
+	font-size: 22px;
+	padding-bottom: 70px;
+}
+.news .blocks .block .more {
+	font-size: 17px;
+}
+.map .contacts .title {
+	font-size: 40px;
+}
+.map .contacts .check {
+	font-size: 13px;
+}
+.header .left .up .text .button {
+	width: 200px;
+	font-size: 13px;
+}
+.header .left .up .text .underbutton {
+	width: 200px;
+	font-size: 13px;
+}
+.header .left .up .scroll {
+	font-size: 13px;
+}
+.header .left .up .scroll .arrow {
+	font-size: 40px;
+}
+}
+

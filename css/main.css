@@ -1,0 +1,293 @@
+﻿html,body {
+	margin: 0;
+	padding: 0;
+}
+@font-face {
+        font-family: Century; /* Имя шрифта */
+        src: url(../fonts/CenturyGothic.ttf); /* Путь к файлу со шрифтом */
+    }
+@font-face {
+        font-family: Raleway; /* Имя шрифта */
+        src: url(../fonts/Raleway-SemiBold.ttf); /* Путь к файлу со шрифтом */
+    }
+@font-face {
+        font-family: Anime; /* Имя шрифта */
+        src: url(../fonts/9421.ttf); /* Путь к файлу со шрифтом */
+    }
+@font-face {
+        font-family: Raleway-Thin; /* Имя шрифта */
+        src: url(../fonts/Raleway-Thin.ttf); /* Путь к файлу со шрифтом */
+    }
+.content {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.menu {
+	width: 25%;
+	height: 100%;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	background-color: #171717;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+}
+.menu .point {
+	width: 100%;
+	font-size: 20px;
+	font-family: Raleway;
+	font-weight: bold;
+	transition: .2s;
+	color: white;
+	text-align: center;
+	padding: 10px 0;
+	cursor: pointer;
+}
+.menu .point:hover {
+	color: #171717;
+	background-color: #808080;
+}
+.content::-webkit-scrollbar {
+    width: 10px;
+}
+.content::-webkit-scrollbar-track {
+    background-color: #808080;
+}
+.content::-webkit-scrollbar-thumb {
+    background: #171717;
+}
+.right {
+	text-align: center;
+	width: 75%;
+	flex-direction: column;
+	background-color: #808080;
+	margin-left: 25%;
+}
+.right .title {
+	margin: auto;
+	margin-top: 40px;
+	font-size: 20px;
+	align-self: center;
+	text-align: center;
+	width: 70%;
+	font-family: Century;
+	border-bottom: 3px solid #171717;
+	color: #171717;
+}
+.right .aim {
+	margin: auto;
+	width: 50%;
+	align-self: center;
+	font-family: Century;
+	color: white;
+	background-color: #171717;
+	font-size: 15px;
+	padding: 10px;
+	text-align: center;
+}
+.right .text {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-top: 20px;
+	align-items: center;
+	background-color: white;
+}
+.right .h {
+	font-family: Raleway;
+	font-weight: bold;
+	width: 100%;
+	text-align: center;
+	color: #171717;
+	/* margin-bottom: 20px; */
+	padding: 20px;
+	font-size: 15px;
+	align-self: center;
+}
+.right .p {
+	font-family: Raleway;
+	font-weight: bold;
+	width: 90%;
+	text-align: justify;
+	color: #171717;
+	padding-bottom: 10px;
+	font-size: 13px;
+	text-indent: 20px;
+	align-self: center;
+}
+
+.right .s {
+	font-family: Raleway;
+	font-weight: bold;
+	width: 90%;
+	text-align: justify;
+	color: #171717;
+	padding-bottom: 0px;
+	font-size: 13px;
+	text-indent: 20px;
+	align-self: center;
+}
+
+.right .i {
+	font-family: Raleway;
+	font-weight: bold;
+	width: 90%;
+	<!-- text-align: justify; -->
+	color: #171717;
+	padding-bottom: 10px;
+	font-size: 13px;
+	text-indent: 20px;
+	align-self: center;
+	font-style: italic;
+}
+
+.right .img {
+	width: 70%;
+	min-height: 50px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+.right .img:hover {
+	width: 70%;
+	min-height: 100px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+
+.right .img1 {
+	width: 70%;
+	min-height: 200px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+.right .img1:hover {
+	width: 70%;
+	min-height: 300px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.right .img2 {
+	width: 70%;
+	min-height: 500px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%; 
+	/* transition: 0.4s; */ */
+	}
+	.right .img2:hover {
+	width: 100%;
+	min-height: 600px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%; 
+	}
+.right .vidos {
+	width: 70%;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%; 
+	}
+	
+	
+
+.dialog{
+	position:fixed;
+	top:50%;
+	left:100%;
+	width:300px;
+	height:430px;
+	margin-left:-25px;
+	margin-top:-215px;
+	padding:10px;
+	border:#000 2px solid;
+	border-radius:10px;
+	background:#fff;
+	color:#000;
+	z-index:1500;
+	font-size:12pt;
+}
+.dialog .label{
+	transform: rotate(270deg);
+	width:430px;
+	height:20px;
+	text-align:center;
+	overflow:hidden;
+	display:inline-block;
+	margin-left:-71%;
+	margin-top:68%;
+	cursor:pointer;
+}
+
+.dialog .header{
+	text-align:center;
+	margin-top:-200px;
+}
+
+.dialog .history{
+	height: 300px;
+	overflow-x:hidden;
+	overflow-y:scroll;
+}
+
+.dialog input, .dialog button, .dialog .history{
+	margin:2px 25px;
+	width:85%;
+	border:1px #666 solid;
+	border-radius: 5px;
+	font-size:14px;
+}
+.dialog .history .question, .dialog .history .answer{
+	margin:5px;
+	width:78%;
+	border-radius: 5px;
+	padding:5px;
+}
+.dialog .history .question{
+	margin-left:40px;
+	background:#99f;
+}
+.dialog .history .answer{
+	margin-right:40px;
+	background:#9ff;
+}
+/*оформление картинок в диалоге*/
+.dialog .history .answer img,.dialog .history .answer embed{
+	cursor: pointer;
+	display: block;
+	max-width: 180px;
+}
+
+
+
+.right .webgl-content * {border: 0; margin: 0; padding: 0} */
+.right .webgl-content {position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
+
+.right .webgl-content .logo, .progress { left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
+.right .webgl-content .logo {background: url('progressLogo.Light.png') no-repeat center / contain; width: 154px; height: 130px;}
+.right .webgl-content .progress {height: 18px; width: 141px; margin-top: 90px;}
+.right .webgl-content .progress .empty {background: url('progressEmpty.Light.png') no-repeat right / cover; float: right; width: 100%; height: 100%; display: inline-block;}
+.right .webgl-content .progress .full {background: url('progressFull.Light.png') no-repeat left / cover; float: left; width: 0%; height: 100%; display: inline-block;}
+
+.right .webgl-content .logo.Dark {background-image: url('progressLogo.Dark.png');}
+.right .webgl-content .progress.Dark .empty {background-image: url('progressEmpty.Dark.png');}
+.right .webgl-content .progress.Dark .full {background-image: url('progressFull.Dark.png');}
+
+.right .webgl-content .footer {margin-top: 5px; height: 38px; line-height: 38px; font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 18px;} 
+
+/* .right .webgl-content .footer .webgl-logo, .title, .fullscreen {height: 8%; display: inline-block; background: transparent center no-repeat;}  */
+
+/* .right .webgl-content .footer .webgl-logo {background-image: url('webgl-logo.png'); width: 204px; float: left;} */
+/* .right .webgl-content .footer .title {margin-right: 10px; float: right;} */
+
+.right .webgl-content .footer .fullscreen {background-image: url('fullscreen.png'); width: 38px; float: right;}
+

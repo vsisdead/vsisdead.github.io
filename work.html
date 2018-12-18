@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Выполнение работы</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/scroll.js"></script>
+	
+	<!-- <link rel="stylesheet" href="TemplateData/style.css"> -->
+    <script src="TemplateData/UnityProgress.js"></script>  
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/tut.json", {onProgress: UnityProgress});
+    </script>
+</head>
+<body>
+	<div class="content">
+	<div class="menu">
+		<a href="vvedenie.html" class="point" style="text-decoration: none; "><div >Введение</div></a>
+		<a href="opisanie.html" class="point" style="text-decoration: none; "><div >Описание установки</div></a>
+		<a href="work.html" class="point" style="text-decoration: none; background-color: #808080; color: #171717;" "><div >Эксперимент</div></a>
+		<a href="about.html" class="point" style="text-decoration: none;"><div >Разработчик</div></a>
+	</div>
+	<div class="right">
+		<div class="title">Определение температуры и удельной теплоты плавления твёрдых веществ</div>
+		<div class="aim">Ознакомиться с основами теории фазовых переходов; изучить закономерности фазовых переходов первого рода; определить температуру и удельную теплоту плавления кристаллического вещества.</div>
+		<div class="text">
+		<div class="h">Выполнение работы</div>
+		
+		<div class="webgl-content">
+      <div id="gameContainer" style="width: 640px; height: 420px"></div>
+      <div class="footer">
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+      </div>
+    </div>
+		
+		
+		</div>
+	</div>
+	</div>
+</body>
+</html>
