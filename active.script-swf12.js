@@ -14,7 +14,7 @@ function prepare_environment() {
   //крупный план изображений
 	document.body.innerHTML+="<div id='imgalert' style='display:none; '>"+
 		"<div class='bg' onclick='hide(\"imgalert\")'>&nbsp;</div>"+
-		"<img id='img_in_alert'  src='' />"+
+		"<img id='img_in_alert' style='width:50%; padding:5%; margin-left:33%;' src='' />"+
 	"</div>";
     //поле с распознаванием речи
     // Задаем API-ключ (подробнее см. Глобальные настройки API).
