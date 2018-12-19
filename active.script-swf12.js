@@ -12,9 +12,9 @@ function prepare_environment() {
 "</div>";
 
   //крупный план изображений
-	document.body.innerHTML+="<div id='imgalert'  style='display:none'>"+
+	document.body.innerHTML+="<div id='imgalert' style='display:none; '>"+
 		"<div class='bg' onclick='hide(\"imgalert\")'>&nbsp;</div>"+
-		"<img id='img_in_alert' src='' />"+
+		"<img id='img_in_alert'  src='' />"+
 	"</div>";
     //поле с распознаванием речи
     // Задаем API-ключ (подробнее см. Глобальные настройки API).
@@ -48,11 +48,8 @@ function toggleDialog() {
 
 //база знаний
 var knowledge = [
-    ["луна",
-	 "является",
-	 "спутником Земли"],
         //0) температуропроводность
-         ["теплопроводностью", "является",
+    ["теплопроводностью", "является",
         "способность материальных тел к переносу энергии (теплообмену) от более нагретых частей тела к менее нагретым частям тела"],
       //1) В чём заключается цель работы
     ["цель работы", "заключается", "в определении температуры и удельной теплоты плавления твердых веществ."],
@@ -232,8 +229,8 @@ var knowledge = [
 
     //38) Для чего нужен милливольтметр
     ["милливольтметр",
-     "нужен", 
-     " для измерения термо-ЭДС"],
+     "служит", 
+     "для измерения термо-ЭДС"],
 
     //39) Какая необходимая температура воды
     ["необходимая температура воды",
@@ -475,6 +472,13 @@ function getAnswer(question) {
 
 function zoom(src) {
     document.getElementById("img_in_alert").src = src;
-    $("#imgalert").css({ "display": "block" });
-    clearInterval(timer);
+    $("#imgalert").css({ "display": "block"  });
+	//var asd = document.getElementById("imgalert");
+	//asd.className = "Myasd";
+	$("#dialog").animate({ "margin-left": "-25px" }, 1000, function () { });
+        dialogOn = false;
+        timer = setInterval(alert_over_time, timeout);
+}
+function hide(id) {
+    $("#imgalert").css({ "display": "none" });
 }
